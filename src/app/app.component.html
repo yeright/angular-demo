@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+</div>
+
+<table>
+  <thead>
+      <tr>
+        <th>Stock</th>
+        <th>Price</th>
+        <th>Volume</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let row of baseData">
+        <td class="label">
+          {{ row.label }}
+        </td>
+        <td class="num">
+          {{ row.price }}
+        </td>
+        <td class="num">
+          {{ row.vol }}
+        </td>
+      </tr>
+  </tbody>
+</table>
+
+<button (click)="goManual()">Manual</button>
